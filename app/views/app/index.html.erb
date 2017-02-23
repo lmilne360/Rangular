@@ -1,3 +1,8 @@
-<div ng-app>
+<div ng-app="app">
 <h1>App#index</h1>
+  <div ng-controller="exController as ctrl">
+    <li ng-repeat="exercise in ctrl.exercises">
+      {{exercise.name}}
+    </li>
+  </div>
 </div>
