@@ -3,10 +3,7 @@ function ExerciseController() {
 
   ctrl.add = add;
 
-  ctrl.exercises = [
-    {name: "Bench Press"},
-    {name: "Squats"}
-  ]
+  ctrl.exercises = []
 
 //Adds an exercise
   function add() {
