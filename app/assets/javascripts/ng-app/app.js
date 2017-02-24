@@ -15,6 +15,11 @@ angular
                 templateUrl: 'exercisesIndex.html',
                 controller: 'exCtrl as ctrl'
             })
+            .state('exercises.show', {
+              url: 'exercise/{id}',
+              templateURL: 'exercisesShow.html',
+              controller: 'exCtrl as ctrl'
+            })
 
             //
             .state('dashboard', {
