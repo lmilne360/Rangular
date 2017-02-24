@@ -34,7 +34,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'angularjs-rails'
+gem 'bower-rails'
+gem 'angular-rails-templates'
 
 
 group :development, :test do
