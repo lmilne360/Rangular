@@ -23,7 +23,8 @@ before_action :set_exercise, only: [:show, :update, :destroy]
   end
 
   def update
-
+    @exercise.update(exercise_params)
+    render json: @exercise
   end
 
   def destroy

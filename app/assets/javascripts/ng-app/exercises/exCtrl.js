@@ -12,6 +12,15 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
                 $state.go('exercises');
             });
     };
+
+    ctrl.update = function(){
+      ExerciseService.updateExercise(ctrl.exercise)
+        .then(function(results){
+          ctrl.exercise = results.data;
+        });
+        $state.go('exercises');
+    };
+
 }
 angular.module('app')
     .controller('exCtrl', ExerciseController);
