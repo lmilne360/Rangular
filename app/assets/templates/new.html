@@ -1,10 +1,8 @@
 <div class="col-md-4 ">
-  <h2>New Exercise</h2>
-  <form name="form">
-      <input
-          name="username"
-          ng-model="ctrl.newExercise.name"
-          required="required" />
-  </form>
-  <span>{{ctrl.newExercise}}</span>
+    <h2>New Exercise</h2> {{ctrl.newExercise}}
+    <form name="form" ng-submit="ctrl.create()">
+        <input name="username" ng-model="ctrl.newExercise.name" required="required" />
+        <input type="submit" value="submit">
+    </form>
+
 </div>

@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require angular
+//= require ng-rails-csrf
 //= require angular-animate
 //= require angular-ui-router
 //= require angular-rails-templates

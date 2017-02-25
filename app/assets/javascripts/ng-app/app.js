@@ -2,5 +2,6 @@ angular
     .module('app', [
         'ngAnimate',
         'ui.router',
-        'templates'
+        'templates',
+        'ng-rails-csrf'
     ]);
