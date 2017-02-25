@@ -8,22 +8,21 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
     ctrl.create = function() {
         ExerciseService.createExercise(ctrl.newExercise)
             .then(function(newExercise) {
-               ctrl.exercises.push(newExercise.data);
-                $state.go('exercises');
+                ctrl.exercises.push(newExercise.data);
             });
     };
 
-    ctrl.update = function(){
-      ExerciseService.updateExercise(ctrl.exercise)
-        .then(function(results){
-          ctrl.exercise = results.data;
-        });
+    ctrl.update = function() {
+        ExerciseService.updateExercise(ctrl.exercise)
+            .then(function(results) {
+                ctrl.exercise = results.data;
+            });
         $state.go('exercises');
     };
 
-    ctrl.delete = function (id) {
-      ExerciseService.deleteExercise(id);
-      $state.reload();
+    ctrl.delete = function(id) {
+        ExerciseService.deleteExercise(id);
+        $state.reload();
     };
 
 }
