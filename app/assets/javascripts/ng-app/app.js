@@ -23,13 +23,13 @@ angular
                 }
             })
             .state('exercise', {
-              url: 'exercise/{id}',
-              templateURL: 'exercisesShow.html',
+              url: '/exercise/{id}',
+              templateUrl: 'exercisesShow.html',
               controller: 'exCtrl as ctrl',
               resolve: {
                 exercises: function(){ return {}; }, //don't need for show page
                 exercise: function ($stateParams, ExerciseService) {
-                  return ExerciseService.getExercise($stateParams.id)
+                  return ExerciseService.getExercise($stateParams.id);
                 }
               }
             })

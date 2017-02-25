@@ -19,7 +19,6 @@ function ExerciseService($http) {
     this.deleteExercise = function(id) {
       return  $http.delete(`/exercises/${id}`);
     };
-    
 }
 angular
   .module('app')
