@@ -1,3 +1,6 @@
 <div class="container">
-    <h2>{{ctrl.exercise.name}}</h2>
+  <div class="col-md-8">
+    <h2>{{ctrl.exercise.name}} <a ui-sref="exercise.edit" class="btn btn-sm btn-default">Edit this Exercise</a></h2>
+    </div>
+    <ui-view></ui-view>
 </div>

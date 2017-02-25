@@ -23,8 +23,9 @@ angular
               url: 'new',
               templateUrl: 'new.html',
               controller: 'exCtrl as ctrl',
-              
+
           })
+
 
           // Gets one exercise and takes to show page
           .state('exercise', {
@@ -37,6 +38,12 @@ angular
                 return ExerciseService.getExercise($stateParams.id);
               }
             }
+          })
+
+          .state('exercise.edit', {
+              url: '/edit',
+              templateUrl: 'exerciseEdit.html',
+              controller: 'exCtrl as ctrl'
           })
 
           //
