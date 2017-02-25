@@ -28,7 +28,7 @@ before_action :set_exercise, only: [:show, :update, :destroy]
   end
 
   def destroy
-
+    @exercise.destroy
   end
 
   def set_exercise

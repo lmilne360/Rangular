@@ -21,6 +21,11 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
         $state.go('exercises');
     };
 
+    ctrl.delete = function (id) {
+      ExerciseService.deleteExercise(id);
+      $state.reload();
+    };
+
 }
 angular.module('app')
     .controller('exCtrl', ExerciseController);
