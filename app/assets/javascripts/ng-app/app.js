@@ -18,14 +18,20 @@ angular
                   exercises: function(ExerciseService){
                     return  ExerciseService.getAll();
                   },
-                  exercise: function(){ return {};}
+                  exercise: function(){ return {}; }// dont need for index
 
                 }
             })
-            .state('exercises.show', {
+            .state('exercise', {
               url: 'exercise/{id}',
               templateURL: 'exercisesShow.html',
-              controller: 'exCtrl as ctrl'
+              controller: 'exCtrl as ctrl',
+              resolve: {
+                exercises: function(){ return {}; }, //don't need for show page
+                exercise: function ($stateParams, ExerciseService) {
+                  return ExerciseService.getExercise($stateParams.id)
+                }
+              }
             })
 
             //
