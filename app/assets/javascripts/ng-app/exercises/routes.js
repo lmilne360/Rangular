@@ -19,6 +19,12 @@ angular
 
               }
           })
+          .state('exercises.new', {
+              url: 'new',
+              templateUrl: 'new.html',
+              controller: 'exCtrl as ctrl',
+              
+          })
 
           // Gets one exercise and takes to show page
           .state('exercise', {

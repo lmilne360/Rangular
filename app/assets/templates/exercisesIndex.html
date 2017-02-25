@@ -1,8 +1,12 @@
 <div class="container">
-    <h1> Exercise index</h1>
-    <ul>
-        <li ng-repeat="exercise in ctrl.exercises">
-          <a href "" ui-sref="exercise({ id: exercise.id})" class="btn btn-secondary">{{exercise.name}}</a>
-        </li>
-    </ul>
+    <div class="container col-md-8">
+        <h1> Exercise index</h1>
+        <ul>
+            <li ng-repeat="exercise in ctrl.exercises">
+                <a href "" ui-sref="exercise({ id: exercise.id})" class="btn btn-secondary">{{exercise.name}}</a>
+            </li>
+        </ul>
+
+    </div>
+    <div ui-view></div>
 </div>
