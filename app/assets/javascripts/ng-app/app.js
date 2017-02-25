@@ -9,6 +9,7 @@ angular
         /**
          * Routes and States
          */
+         // Gets all exercises, goes to index
         $stateProvider
             .state('exercises', {
                 url: '/',
@@ -22,6 +23,8 @@ angular
 
                 }
             })
+
+            // Gets one exercise and takes to show page
             .state('exercise', {
               url: '/exercise/{id}',
               templateUrl: 'exercisesShow.html',
