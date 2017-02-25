@@ -13,7 +13,14 @@ angular
             .state('exercises', {
                 url: '/',
                 templateUrl: 'exercisesIndex.html',
-                controller: 'exCtrl as ctrl'
+                controller: 'exCtrl as ctrl',
+                resolve: {
+                  exercises: function(ExerciseService){
+                    return  ExerciseService.getAll();
+                  },
+                  exercise: function(){ return {};}
+
+                }
             })
             .state('exercises.show', {
               url: 'exercise/{id}',
