@@ -10,11 +10,12 @@ before_action :set_exercise, only: [:show, :update, :destroy]
   end
 
   def new
-
   end
 
   def create
-
+    @exercise = Exercise.new(exercise_params)
+    @exercise.save
+    render json: @exercise
   end
 
   def edit
@@ -31,5 +32,8 @@ before_action :set_exercise, only: [:show, :update, :destroy]
 
   def set_exercise
     @exercise = Exercise.find(params[:id])
+  end
+  def exercise_params
+    params.require(:exerciseData).permit(:name)
   end
 end
