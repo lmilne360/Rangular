@@ -1,4 +1,4 @@
-function ExerciseController($scope, ExerciseService, exercise, exercises, $state) {
+function ExerciseController($scope, ExerciseService, exercise, exercises, $state, $filter) {
     var ctrl = this;
 
     ctrl.things = ['Angular', 'Rails 4.1', 'UI Router', 'Together!!'];
@@ -24,6 +24,14 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
         ExerciseService.deleteExercise(id);
         $state.reload();
     };
+
+    ctrl.search = '';
+
+    ctrl.refilter = function () {
+      ctrl.filteredList = $filter('filter')(ctrl.exercises, ctrl.search);
+    };
+
+    ctrl.refilter();
 
 }
 angular.module('app')

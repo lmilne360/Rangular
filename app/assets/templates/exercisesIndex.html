@@ -1,8 +1,9 @@
 <div class="container">
     <div class="container col-md-8">
         <h1> Exercise index</h1>
+        <input ng-model="ctrl.search" ng-change="ctrl.refilter()" placeholder="Filter exercises" />
         <ul class="list-unstyled">
-            <li ng-repeat="exercise in ctrl.exercises">
+            <li ng-repeat="exercise in ctrl.filteredList">
                 <a href "" ui-sref="exercise({ id: exercise.id})" class="btn btn-secondary">{{exercise.name}}</a>
                 <button type="button" class="close pull-left" aria-hidden="true"  ng-really-message="Are you sure you want to delete this exercise?" ng-really-click="ctrl.delete(exercise.id)">×</button>
             </li>
