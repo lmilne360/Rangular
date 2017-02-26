@@ -14,8 +14,11 @@ before_action :set_exercise, only: [:show, :update, :destroy]
 
   def create
     @exercise = Exercise.new(exercise_params)
-    @exercise.save
-    render json: @exercise
+    if @exercise.save
+      render json: @exercise
+    else
+      render json: {error: @exercise.errors.full_messages.to_sentence}
+    end
   end
 
   def edit
