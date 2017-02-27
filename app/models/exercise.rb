@@ -2,6 +2,10 @@ class Exercise < ApplicationRecord
   belongs_to :category
   validates_presence_of :name
 
+  def category_title
+    self.try(:category).try(:title)
+  end
+
   def category=(title)
     title = title.strip.singularize.downcase.capitalize
     category =  Category.where(title: title).first_or_create
