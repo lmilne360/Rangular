@@ -9,6 +9,7 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
         ExerciseService.createExercise(ctrl.newExercise)
             .then(function(newExercise) {
                 ctrl.exercises.push(newExercise.data);
+                $state.reload();
             });
     };
 
