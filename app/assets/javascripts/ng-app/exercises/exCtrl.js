@@ -21,8 +21,11 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
     };
 
     ctrl.delete = function(id) {
-        ExerciseService.deleteExercise(id);
-        $state.reload();
+        ExerciseService.deleteExercise(id)
+        .then(function(){
+            $state.reload();
+        })
+
     };
 
     ctrl.search = '';
