@@ -15,6 +15,7 @@ before_action :set_exercise, only: [:show, :update, :destroy]
   def create
     @exercise = Exercise.new(exercise_params)
     if @exercise.save
+      binding.pry
       render json: @exercise
     else
       render json: {error: @exercise.errors.full_messages.to_sentence}
