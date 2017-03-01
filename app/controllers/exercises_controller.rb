@@ -45,6 +45,6 @@ before_action :set_exercise, only: [:show, :update, :destroy]
     @exercise = Exercise.find(params[:id])
   end
   def exercise_params
-    params.require(:exerciseData).permit(:name, :weight, :reps, :category)
+    params.require(:exerciseData).permit(:name, :weight, :reps, :category, :goal)
   end
 end
