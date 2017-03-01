@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="col-md-8">
+    <div class="col-md-9">
         <h2>{{ctrl.exercise.name}} <a ui-sref="exercise.edit" class="btn" aria-hidden="true">&#9986;</a></h2>
-
+        <progress-bar current-value='ctrl.exercise.weight' desired-value='ctrl.exercise.goal'></progress-bar>
         <table style="width:100%">
             <tr>
                 <th>Category</th>
@@ -19,7 +19,7 @@
 
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="show-view-container">
         <div class="show-ui-view" ui-view></div>
       </div>
