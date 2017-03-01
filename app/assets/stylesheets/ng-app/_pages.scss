@@ -1,0 +1,22 @@
+.dashboard-view-container{
+    position: relative;
+}
+.dashboard-ui-view{
+    @extend .main-view-container;
+}
+
+// Index Page
+.index-view-container{
+    position: relative;
+}
+.index-ui-view{
+    @extend .main-view-container;
+}
+
+// Show page
+.show-view-container{
+    position: relative;
+}
+.show-ui-view{
+    @extend .main-view-container;
+}

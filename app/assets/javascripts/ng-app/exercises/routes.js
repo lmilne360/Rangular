@@ -21,7 +21,7 @@ angular
           })
           .state('exercises.new', {
               url: 'new',
-              templateUrl: 'new.html',
+              templateUrl: 'exercisesNew.html',
               controller: 'exCtrl as ctrl',
 
           })
@@ -53,7 +53,7 @@ angular
           .state('dashboard', {
           abstract: true,
           url: '/dashboard',
-          templateUrl: 'layout.html'
+          templateUrl: 'dashboardLayout.html'
       })
           // the default route when someone hits dashboard
           .state('dashboard.one', {
