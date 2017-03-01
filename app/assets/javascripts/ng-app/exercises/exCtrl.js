@@ -22,7 +22,7 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
             }).catch(function(error){
               console.log(error.message);
             });
-        $state.go('exercises');
+        $state.go('exercise', ctrl.exercise.id);
     };
 
     ctrl.delete = function(id) {
