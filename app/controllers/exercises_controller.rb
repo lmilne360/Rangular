@@ -6,7 +6,11 @@ before_action :set_exercise, only: [:show, :update, :destroy]
   end
 
   def show
-    render json: @exercise
+    if @exercise
+      render json: @exercise
+    else
+      render json: {error: "Exercise not found", status: 404 }, status: 404
+    end
   end
 
   def new
@@ -26,8 +30,11 @@ before_action :set_exercise, only: [:show, :update, :destroy]
   end
 
   def update
-    @exercise.update(exercise_params)
-    render json: @exercise
+    if @exercise.update(exercise_params)
+      render json: @exercise
+    else
+      render json: {error: @exercise.errors.full_messages.to_sentence}
+    end
   end
 
   def destroy

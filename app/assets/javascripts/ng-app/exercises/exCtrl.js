@@ -10,6 +10,8 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
             .then(function(newExercise) {
                 ctrl.exercises.push(newExercise.data);
                 $state.reload();
+            }).catch(function(error){
+              console.log(error.message);
             });
     };
 
@@ -17,6 +19,8 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
         ExerciseService.updateExercise(ctrl.exercise)
             .then(function(results) {
                 ctrl.exercise = results.data;
+            }).catch(function(error){
+              console.log(error.message);
             });
         $state.go('exercises');
     };
@@ -25,7 +29,9 @@ function ExerciseController($scope, ExerciseService, exercise, exercises, $state
         ExerciseService.deleteExercise(id)
         .then(function(){
             $state.reload();
-        })
+        }).catch(function(error){
+          console.log(error.message);
+        });
 
     };
 

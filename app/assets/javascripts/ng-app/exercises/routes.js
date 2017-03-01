@@ -34,8 +34,11 @@ angular
             controller: 'exCtrl as ctrl',
             resolve: {
               exercises: function(){ return {}; }, //don't need for show page
-              exercise: function ($stateParams, ExerciseService) {
-                return ExerciseService.getExercise($stateParams.id);
+              exercise: function ($stateParams, ExerciseService, $state) {
+                return ExerciseService.getExercise($stateParams.id).catch(function(err){
+                  alert(err.statusText); //Raises an alert on 'Record not found'
+                  $state.go("exercises");
+                });
               }
             }
           })
