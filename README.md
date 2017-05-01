@@ -18,7 +18,7 @@ Clone this repo:
 * `bundle install`
 * `bower install`
 * `rake db:migrate`
-* `rails s`
+* `rails server`
 * Navigate to `http://localhost:3000`
 
 ##Contributing
