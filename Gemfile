@@ -9,6 +9,9 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 
+#Store secrets in ENV
+gem 'dotenv-rails', require: 'dotenv/rails-now', groups: [:development, :test]
+
 # User PostgreSQL for database
 gem 'pg', '~> 0.20.0'
 
@@ -42,6 +45,8 @@ gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'ng-rails-csrf'
 gem 'active_model_serializers'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

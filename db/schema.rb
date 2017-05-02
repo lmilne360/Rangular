@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170301043748) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
@@ -26,7 +29,8 @@ ActiveRecord::Schema.define(version: 20170301043748) do
     t.integer  "weight"
     t.integer  "category_id"
     t.integer  "goal"
-    t.index ["category_id"], name: "index_exercises_on_category_id"
+    t.index ["category_id"], name: "index_exercises_on_category_id", using: :btree
   end
 
+  add_foreign_key "exercises", "categories"
 end
