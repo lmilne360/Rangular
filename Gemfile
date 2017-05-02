@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.0.1'
 
 #Store secrets in ENV
-gem 'dotenv-rails', require: 'dotenv/rails-now', groups: [:development, :test]
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
 
 # User PostgreSQL for database
 gem 'pg', '~> 0.20.0'
