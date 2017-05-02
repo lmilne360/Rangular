@@ -15,8 +15,6 @@ gem 'dotenv-rails', require: 'dotenv/rails-now', groups: [:development, :test]
 # User PostgreSQL for database
 gem 'pg', '~> 0.20.0'
 
-# Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
