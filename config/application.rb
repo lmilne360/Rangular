@@ -5,8 +5,9 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-require 'dotenv/load'
 Bundler.require(*Rails.groups)
+
+Dotenv::Railtie.load
 
 module Raj
   class Application < Rails::Application
